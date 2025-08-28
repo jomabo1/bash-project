@@ -21,7 +21,6 @@ sauber bereinigt werden kann.
 ##  Voraussetzungen
 
 - Linux mit Bash-Shell
-- Github installiert 
 - Root-Rechte (`sudo`)  
 - Pakete: `enscript`, `ghostscript`  
 
