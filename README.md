@@ -51,7 +51,7 @@ in gewünschtes Verzeichnis wechseln und folgende Befehle ausführen:
     chmod +x remove_users.sh
 
 
-### 4. Benutzer erstellen + PDF generieren
+### 4. Benutzer erstellen, .txt- und .PDF File generieren
 
 
     ./create_users.sh
