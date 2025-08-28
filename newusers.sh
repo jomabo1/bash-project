@@ -51,5 +51,3 @@ echo "Wandle Textdatei in PDF um..."
 enscript "$OUTPUT_DIR/newusers.txt" -B -q -p - | ps2pdf - "$OUTPUT_DIR/newusers.pdf"
 
 echo "PDF gespeichert unter: $OUTPUT_DIR/newusers.pdf"
-
-Add Bash script to create 10 users and export to PDF
