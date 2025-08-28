@@ -16,4 +16,3 @@ echo "Alle Benutzer aus den bash-project wurden gelöscht"
 echo "Noch vorhandene Benutzer:"
 
 awk -F: '$3 >= 1000 && $3 < 65534 {print $1}' /etc/passwd
-
