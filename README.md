@@ -24,20 +24,19 @@ Zusätzlich gibt es ein Aufräumskript, das die erstellten Benutzer wieder lösc
 
 ### 1. Skripte vorbereiten
 
-    ```bash
+  
     chmod +x create_users.sh
     chmod +x remove_users.sh.sh
-    ```
+
 
 ### 2. Benutzer erstellen + PDF generieren
 
-    ```bash
+
     sudo ./create_users.sh
-    ```
+
 
 ### 3. Benutzer löschen (zur Bereinigung)
 
-    ```bash
     sudo ./remove_users.sh
-    ```
+
 
