@@ -54,7 +54,7 @@ in gewünschtes Verzeichnis wechseln und folgende Befehle ausführen:
 ### 4. Benutzer erstellen + PDF generieren
 
 
-    sudo ./create_users.sh
+    ./create_users.sh
 
  Du wirst aufgefordert, einen Speicherort einzugeben.  
     Drückst du einfach **Enter**, wird `/tmp/bash-project` als Standard verwendet.
@@ -65,6 +65,6 @@ in gewünschtes Verzeichnis wechseln und folgende Befehle ausführen:
 ### 5. Benutzer löschen (zur Bereinigung nach Ende des Projekts)
 Dieses Skript löscht alle Benutzer `user01` bis `user10`  und zeigt danach die noch vorhandenen Benutzer
 
-    sudo ./remove_users.sh
+    ./remove_users.sh
 
 
