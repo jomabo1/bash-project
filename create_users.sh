@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# =====================================
 # Benutzerdefinierter Speicherpfad
-# =====================================
 
 read -p "Speicherpfad für Dateiausgabe eingeben [Standard: /tmp/bash-project]: " USER_INPUT
 OUTPUT_DIR="${USER_INPUT:-/tmp/bash-project}"
@@ -11,21 +9,15 @@ OUTPUT_DIR="${USER_INPUT:-/tmp/bash-project}"
 mkdir -p "$OUTPUT_DIR"
 echo "Speicherort definiert: $OUTPUT_DIR"
 
-# =====================================
-# Abhängigkeiten prüfen
-# =====================================
+# Benötigte ANwendungen installieren
 echo "Installiere benötigte Anwendungen"
 sudo apt update
 sudo apt install -y enscript ghostscript
 
-# =====================================
 # Textdatei vorbereiten
-# =====================================
 > "$OUTPUT_DIR/newusers.txt"
 
-# =====================================
 # Benutzer erstellen
-# =====================================
 echo "Erstelle Benutzer..."
 for i in $(seq -w 1 10); do
     USER="user${i}"
@@ -44,9 +36,7 @@ done
 
 echo "Benutzerliste gespeichert in: $OUTPUT_DIR/newusers.txt"
 
-# =====================================
 # Textdatei in PDF umwandeln
-# =====================================
 echo "Wandle Textdatei in PDF um..."
 enscript "$OUTPUT_DIR/newusers.txt" -B -q -p - | ps2pdf - "$OUTPUT_DIR/newusers.pdf"
 
