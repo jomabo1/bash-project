@@ -37,10 +37,11 @@ sauber bereinigt werden kann.
 
 
 ### 2. Github Repository klonen
-in gewünschtes Verzeichnis wechseln
+in gewünschtes Verzeichnis wechseln und folgende Befehle ausführen:
+    ```bash
     git clone https://github.com/jomabo1/bash-project.git
     cd bash-project
-
+    ```
 
 ### 3. Skripte vorbereiten
 
