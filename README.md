@@ -62,10 +62,8 @@ in gewünschtes Verzeichnis wechseln und folgende Befehle ausführen:
     Beim **ersten Login** müssen sie ihr Passwort **zwangsläufig ändern**.
     
 ### 5. Benutzer löschen (zur Bereinigung nach Ende des Projekts)
+Dieses Skript löscht alle Benutzer `user01` bis `user10`  und zeigt danach die noch vorhandenen Benutzer
 
     sudo ./remove_users.sh
-
-     Dieses Skript löscht alle Benutzer `user01` bis `user10`  
-    und zeigt danach die noch vorhandenen Benutzer
 
 
