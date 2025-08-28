@@ -7,7 +7,7 @@ Zusätzlich gibt es ein Aufräumskript, das die erstellten Benutzer wieder lösc
 | Datei                | Beschreibung                                                       |
 |---------------------|---------------------------------------------------------------------|
 | `create_users.sh`   | Erstellt Benutzer und erzeugt eine Benutzerliste als PDF           |
-| `cleanup_users.sh`  | Löscht alle erstellten Benutzer von `create_users.sh`              |
+| `remove_users.sh`  | Löscht alle erstellten Benutzer von `create_users.sh`              |
 | `README.md`         | Diese Dokumentation und Anleitung                                  |
 
 
@@ -24,11 +24,20 @@ Zusätzlich gibt es ein Aufräumskript, das die erstellten Benutzer wieder lösc
 
 ### 1. Skripte vorbereiten
 
-```bash
-chmod +x create_users.sh
-chmod +x cleanup_users.sh
+    ```bash
+    chmod +x create_users.sh
+    chmod +x remove_users.sh.sh
+    ```
 
 ### 2. Benutzer erstellen + PDF generieren
 
-```bash
-sudo ./create_users.sh
+    ```bash
+    sudo ./create_users.sh
+    ```
+
+### 3. Benutzer löschen (zur Bereinigung)
+
+    ```bash
+    sudo ./remove_users.sh
+    ```
+
