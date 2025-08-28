@@ -6,6 +6,7 @@ Beim **ersten Login** müssen die Benutzer ihr Passwort **zwangsläufig ändern*
 
 Zusätzlich speichert das Skript eine Liste der erstellten Benutzer sowohl als Textdatei (`newusers.txt`)  
 als auch als PDF (`newusers.pdf`).  
+
 Ein zweites Skript dient dazu, alle erstellten Benutzer wieder zu löschen, sodass das System nach einem Test  
 sauber bereinigt werden kann.
 
