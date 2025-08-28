@@ -1,6 +1,13 @@
 # bash-project
-Dieses Bash-Projekt automatisiert die Erstellung von 10 Benutzern auf einem Linux-System, speichert die Benutzerliste in einer Textdatei und wandelt diese in eine PDF-Datei um.
-Zusätzlich gibt es ein Aufräumskript, das die erstellten Benutzer wieder löscht.
+
+Dieses Bash-Projekt automatisiert die Erstellung von 10 Benutzern auf einem Linux-System.  
+Dabei wird für alle Benutzer (`user01` bis `user10`) ein Standardpasswort gesetzt (`TEKO2025!`).  
+Beim **ersten Login** müssen die Benutzer ihr Passwort **zwangsläufig ändern**.  
+
+Zusätzlich speichert das Skript eine Liste der erstellten Benutzer sowohl als Textdatei (`newusers.txt`)  
+als auch als PDF (`newusers.pdf`).  
+Ein zweites Skript dient dazu, alle erstellten Benutzer wieder zu löschen, sodass das System nach einem Test  
+sauber bereinigt werden kann.
 
 ## Projektübersicht
 
@@ -34,9 +41,17 @@ Zusätzlich gibt es ein Aufräumskript, das die erstellten Benutzer wieder lösc
 
     sudo ./create_users.sh
 
+ Du wirst aufgefordert, einen Speicherort einzugeben.  
+    Drückst du einfach **Enter**, wird `/tmp/bash-project` als Standard verwendet.
 
-### 3. Benutzer löschen (zur Bereinigung)
+   **Hinweis:**  Alle Benutzer `user01` bis `user10` erhalten das Standardpasswort `TEKO2025!`.  
+    Beim **ersten Login** müssen sie ihr Passwort **zwangsläufig ändern**.
+    
+### 3. Benutzer löschen (zur Bereinigung nach Ende des Projekts)
 
     sudo ./remove_users.sh
+
+     Dieses Skript löscht alle Benutzer `user01` bis `user10`  
+    und zeigt danach die noch vorhandenen Benutzer
 
 
