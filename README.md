@@ -20,23 +20,37 @@ sauber bereinigt werden kann.
 
 ##  Voraussetzungen
 
-- Linux mit Bash-Shell  
+- Linux mit Bash-Shell
+- Github installiert 
 - Root-Rechte (`sudo`)  
 - Pakete: `enscript`, `ghostscript`  
 
-**Hinweis:** Diese Pakete werden im Skript automatisch installiert, falls sie noch nicht vorhanden sind.
+**Hinweis:** Die Pakete `enscript`, `ghostscript` werden im Skript automatisch installiert, falls sie noch nicht vorhanden sind.
 
 
 ##  Verwendung
 
-### 1. Skripte vorbereiten
+### 1. Github installieren (wenn noch nicht vorhanden)
+
+
+    sudo apt update
+    sudo apt install git -y
+
+
+### 2. Github Repository klonen
+in gewünschtes Verzeichnis wechseln
+    git clone https://github.com/jomabo1/bash-project.git
+    cd bash-project
+
+
+### 3. Skripte vorbereiten
 
   
     chmod +x create_users.sh
     chmod +x remove_users.sh.sh
 
 
-### 2. Benutzer erstellen + PDF generieren
+### 4. Benutzer erstellen + PDF generieren
 
 
     sudo ./create_users.sh
@@ -47,7 +61,7 @@ sauber bereinigt werden kann.
    **Hinweis:**  Alle Benutzer `user01` bis `user10` erhalten das Standardpasswort `TEKO2025!`.  
     Beim **ersten Login** müssen sie ihr Passwort **zwangsläufig ändern**.
     
-### 3. Benutzer löschen (zur Bereinigung nach Ende des Projekts)
+### 5. Benutzer löschen (zur Bereinigung nach Ende des Projekts)
 
     sudo ./remove_users.sh
 
