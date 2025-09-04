@@ -10,16 +10,16 @@ mkdir -p "$OUTPUT_DIR"
 echo "Speicherort definiert: $OUTPUT_DIR"
 
 # Benötigte Anwendungen installieren
-echo "Prüfe Abhängigkeiten..."
+echo "Benötigte Anwendungen werden installiert..."
 sudo apt update
 sudo apt install -y enscript ghostscript
 
 
-# Gewünschte Benutzer eingeben
+# Gewünschte Benutzer Leerzeichen getrennt eingeben
 echo "Bitte gib die gewünschten Benutzernamen mit Leerzeichen getrennt ein:"
 read -a USERLIST
 
-# Datei leeren oder neu anlegen
+# Textdatei neu anlegen
 > "$OUTPUT_DIR/newusers.txt"
 
 # Benutzer erstellen
@@ -27,7 +27,7 @@ for USER in "${USERLIST[@]}"; do
     PASSWORD="TEKO2025!"
 
     if id "$USER" &>/dev/null; then
-        echo "⚠Benutzer $USER existiert bereits – wird übersprungen."
+        echo "Benutzer $USER existiert bereits – wird übersprungen."
     else
         sudo useradd -m -s /bin/bash "$USER"
         echo "${USER}:${PASSWORD}" | sudo chpasswd
@@ -37,10 +37,10 @@ for USER in "${USERLIST[@]}"; do
     fi
 done
 
-echo "Benutzerliste gespeichert in: $OUTPUT_DIR/newusers.txt"
+echo "Benutzerliste als Textdatei gespeichert in: $OUTPUT_DIR/newusers.txt"
 
 # Textdatei in PDF umwandeln
 echo "Wandle Textdatei in PDF um..."
 enscript "$OUTPUT_DIR/newusers.txt" -B -q -p - | ps2pdf - "$OUTPUT_DIR/newusers.pdf"
 
-echo "PDF gespeichert unter: $OUTPUT_DIR/newusers.pdf"
+echo "PDF Datei gespeichert unter: $OUTPUT_DIR/newusers.pdf"
