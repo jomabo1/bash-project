@@ -64,3 +64,8 @@ Trage die gewünschten Benutzernamen mit Leerzeichen getrennt ein
    **Hinweis:**  Alle Benutzer erhalten das Standardpasswort `TEKO2025!`.  
     Beim **ersten Login** müssen sie ihr Passwort **zwangsläufig ändern**.
     
+
+### 5. Kontrolle ob Benutzer erstellt wurden
+
+
+    awk -F: '$3 >= 1000 && $3 < 65534 {print $1}' /etc/passwd
