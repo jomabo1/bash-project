@@ -10,13 +10,13 @@ mkdir -p "$OUTPUT_DIR"
 echo "Speicherort definiert: $OUTPUT_DIR"
 
 # Benötigte Anwendungen installieren
-echo "🔍 Prüfe Abhängigkeiten..."
+echo "Prüfe Abhängigkeiten..."
 sudo apt update
 sudo apt install -y enscript ghostscript
 
 
 # Gewünschte Benutzer eingeben
-echo "👤 Bitte gib die gewünschten Benutzernamen mit Leerzeichen getrennt ein:"
+echo "Bitte gib die gewünschten Benutzernamen mit Leerzeichen getrennt ein:"
 read -a USERLIST
 
 # Datei leeren oder neu anlegen
