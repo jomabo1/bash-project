@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Benutzerdefinierter Speicherpfad
+# Benutzerdefinierter Speicherpfad eintragen
 
 read -p "Speicherpfad für Dateiausgabe eingeben [Standard: /tmp/bash-project]: " USER_INPUT
 OUTPUT_DIR="${USER_INPUT:-/tmp/bash-project}"
@@ -9,28 +9,31 @@ OUTPUT_DIR="${USER_INPUT:-/tmp/bash-project}"
 mkdir -p "$OUTPUT_DIR"
 echo "Speicherort definiert: $OUTPUT_DIR"
 
-# Benötigte ANwendungen installieren
-echo "Installiere benötigte Anwendungen"
+# Benötigte Anwendungen installieren
+echo "🔍 Prüfe Abhängigkeiten..."
 sudo apt update
 sudo apt install -y enscript ghostscript
 
-# Textdatei vorbereiten
+
+# Gewünschte Benutzer eingeben
+echo "👤 Bitte gib die gewünschten Benutzernamen mit Leerzeichen getrennt ein:"
+read -a USERLIST
+
+# Datei leeren oder neu anlegen
 > "$OUTPUT_DIR/newusers.txt"
 
 # Benutzer erstellen
-echo "Erstelle Benutzer..."
-for i in $(seq -w 1 10); do
-    USER="user${i}"
+for USER in "${USERLIST[@]}"; do
     PASSWORD="TEKO2025!"
 
-    # Nur erstellen, wenn Benutzer nicht existiert
     if id "$USER" &>/dev/null; then
-        echo "Benutzer $USER existiert bereits – wird übersprungen."
+        echo "⚠Benutzer $USER existiert bereits – wird übersprungen."
     else
         sudo useradd -m -s /bin/bash "$USER"
         echo "${USER}:${PASSWORD}" | sudo chpasswd
         sudo chage -d 0 "$USER"
         echo "$USER" >> "$OUTPUT_DIR/newusers.txt"
+        echo "Benutzer $USER erstellt."
     fi
 done
 
