@@ -53,10 +53,13 @@ in gewünschtes Verzeichnis wechseln und folgende Befehle ausführen:
 
     ./create_users.sh
 
-    - Du wirst aufgefordert, einen Speicherort einzugeben.  
+
+
+   #### 4.1 Du wirst aufgefordert, einen Speicherort einzugeben.  
     Drückst du einfach **Enter**, wird `/tmp/bash-project` als Standard verwendet.
 
-    - Danach wirst du nach den gewünschten Benutzernamen gefragt (mehrere Namen mit Leerzeichen getrennt).
+   #### 4.2 Danach wirst du nach den gewünschten Benutzernamen gefragt
+    Trage die gewünschten Benutzernamen mit Leerzeichen getrennt ein
 
    **Hinweis:**  Alle Benutzer erhalten das Standardpasswort `TEKO2025!`.  
     Beim **ersten Login** müssen sie ihr Passwort **zwangsläufig ändern**.
