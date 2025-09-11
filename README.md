@@ -13,7 +13,7 @@ als auch als PDF (`newusers.pdf`).
 
 | Datei                | Beschreibung                                                       |
 |---------------------|---------------------------------------------------------------------|
-| `create_users.sh`   | Erstellt Benutzer und erzeugt eine Benutzerliste als PDF           |
+| `create_users_from_file.sh`   | Erstellt Benutzer und erzeugt eine Benutzerliste als PDF           |
 | `README.md`         | Diese Dokumentation und Anleitung                                  |
 
 
@@ -45,13 +45,13 @@ in gewünschtes Verzeichnis wechseln und folgende Befehle ausführen:
 ### 3. Skripte vorbereiten
 
   
-    chmod +x create_users.sh
+    chmod +x create_users_from_file.sh
 
 
 ### 4. Benutzer erstellen, .txt- und .PDF File generieren
 
 
-    ./create_users.sh
+    ./create_users_from_file.sh
 
 
 
