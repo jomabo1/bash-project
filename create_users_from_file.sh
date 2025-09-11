@@ -70,5 +70,5 @@ EOT
 
 done < "$USERFILE"
 
-echo "✅ Alle Benutzer verarbeitet."
-echo "📄 Gesamtliste gespeichert unter: $LISTFILE"
+echo "Alle Benutzer verarbeitet."
+echo "Gesamtliste gespeichert unter: $LISTFILE"
